@@ -1,0 +1,15 @@
+{
+  "language": {
+    "feature": "en"
+  },
+  "plugins": [
+    {
+      "name": "SpecFlow.Plus.LivingDocPlugin",
+      "type": "Generator"
+    },
+    {
+      "name": "SpecFlow.Plus.LivingDocPlugin",
+      "type": "Runtime"
+    }
+  ]
+}

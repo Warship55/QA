@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="8aad8ee3-5a8d-46aa-a91c-1002aaa9410b" name="lungu@DESKTOP-E2811S1 2025-12-01 18:04:40" runUser="DESKTOP-E2811S1\lungu" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-12-01T18:04:40.9021181+02:00" queuing="2025-12-01T18:04:40.9021185+02:00" start="2025-12-01T18:04:21.3116646+02:00" finish="2025-12-01T18:06:46.2459011+02:00" />
+  <TestSettings name="default" id="e2eef794-fb94-475b-b4e0-dfd3e16057ea">
+    <Deployment runDeploymentRoot="lungu_DESKTOP-E2811S1_2025-12-01_18_04_40" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="ffd7483f-4246-4c58-bc69-55fcaad9b061" testId="d51711dc-bd3b-a04a-4cb3-4be7cbc68909" testName="ServiciulDeConversie" computerName="DESKTOP-E2811S1" duration="00:00:16.6901070" startTime="2025-12-01T18:06:29.2348092+02:00" endTime="2025-12-01T18:06:45.9249162+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ffd7483f-4246-4c58-bc69-55fcaad9b061">
+      <Output>
+        <StdOut>Given că sunt pe pagina principală Google&#xD;
+-&gt; done: GoogleVariant3Steps.GivenCaSuntPePaginaPrincipalaGoogle() (0,9s)&#xD;
+When caut pe Google "Google converter services"&#xD;
+-&gt; done: GoogleVariant3Steps.WhenCautPeGoogle("Google converter ...") (9,1s)&#xD;
+Then serviciul de conversie Google trebuie să fie afișat în partea de sus&#xD;
+-&gt; done: GoogleVariant3Steps.ThenServiciulDeConversieGoogleTrebuieSaFieAfisatInParteaDeSus() (0,2s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1e55f984-4d2b-49e5-8070-97ef26ee6754" testId="b4a1859e-6bf4-22dc-bd96-560fcd37e459" testName="CautareInLimbiDiferite(&quot;calculator&quot;,null)" computerName="DESKTOP-E2811S1" duration="00:01:08.5886419" startTime="2025-12-01T18:04:40.8610211+02:00" endTime="2025-12-01T18:05:49.4496632+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1e55f984-4d2b-49e5-8070-97ef26ee6754">
+      <Output>
+        <StdOut>Given că sunt pe pagina principală Google&#xD;
+-&gt; done: GoogleVariant3Steps.GivenCaSuntPePaginaPrincipalaGoogle() (0,1s)&#xD;
+When caut pe Google "calculator"&#xD;
+-&gt; error: Timed out after 60 seconds (60,5s)&#xD;
+Then rezultatele Google trebuie să conțină "calculator"&#xD;
+-&gt; skipped because of previous errors</StdOut>
+        <ErrorInfo>
+          <Message>OpenQA.Selenium.WebDriverTimeoutException : Timed out after 60 seconds&#xD;
+  ----&gt; OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"css selector","selector":"*[name ="q"]"}&#xD;
+  (Session info: chrome=142.0.7444.175); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception</Message>
+          <StackTrace>   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)&#xD;
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)&#xD;
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)&#xD;
+   at Lab7CPP.Pages.GooglePage.SearchSlow(String text) in C:\Users\lungu\Desktop\6-7_CPP\Lab7\Lab7CPP - Slow CAPTCHA Edition\Lab7CPP\Pages\DuckPage.cs:line 38&#xD;
+   at Lab7CPP.Steps.GoogleVariant3Steps.WhenCautPeGoogle(String text) in C:\Users\lungu\Desktop\6-7_CPP\Lab7\Lab7CPP - Slow CAPTCHA Edition\Lab7CPP\Steps\DuckVariant3Steps.cs:line 33&#xD;
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)&#xD;
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan&amp; duration)&#xD;
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)&#xD;
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()&#xD;
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()&#xD;
+   at Lab7CPP.Features.CautariGoogle_Varianta3Feature.ScenarioCleanup()&#xD;
+   at Lab7CPP.Features.CautariGoogle_Varianta3Feature.CautareInLimbiDiferite(String text, String[] exampleTags) in C:\Users\lungu\Desktop\6-7_CPP\Lab7\Lab7CPP - Slow CAPTCHA Edition\Lab7CPP\Features\GoogleSearchVariant3.feature:line 11&#xD;
+--NoSuchElementException&#xD;
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)&#xD;
+   at OpenQA.Selenium.WebDriver.ExecuteAsync(String driverCommandToExecute, Dictionary`2 parameters)&#xD;
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)&#xD;
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)&#xD;
+   at OpenQA.Selenium.By.&lt;.ctor&gt;b__6_0(ISearchContext context)&#xD;
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)&#xD;
+   at OpenQA.Selenium.WebDriver.FindElement(By by)&#xD;
+   at Lab7CPP.Pages.GooglePage.&lt;&gt;c__DisplayClass5_0.&lt;SearchSlow&gt;b__0(IWebDriver d) in C:\Users\lungu\Desktop\6-7_CPP\Lab7\Lab7CPP - Slow CAPTCHA Edition\Lab7CPP\Pages\DuckPage.cs:line 38&#xD;
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="73e930ea-b0cc-4394-aa56-8cfb12c415fb" testId="b68ee06e-3ee5-ee69-634e-44e938eba4a9" testName="CautareInLimbiDiferite(&quot;meteo&quot;,null)" computerName="DESKTOP-E2811S1" duration="00:00:12.3201650" startTime="2025-12-01T18:05:49.4498314+02:00" endTime="2025-12-01T18:06:01.7699959+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="73e930ea-b0cc-4394-aa56-8cfb12c415fb">
+      <Output>
+        <StdOut>Given că sunt pe pagina principală Google&#xD;
+-&gt; done: GoogleVariant3Steps.GivenCaSuntPePaginaPrincipalaGoogle() (0,8s)&#xD;
+When caut pe Google "meteo"&#xD;
+-&gt; done: GoogleVariant3Steps.WhenCautPeGoogle("meteo") (4,8s)&#xD;
+Then rezultatele Google trebuie să conțină "meteo"&#xD;
+-&gt; done: GoogleVariant3Steps.ThenRezultateleGoogleTrebuieSaContina("meteo") (0,3s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c3f3bd8c-069c-425a-8097-cfa8e3026e53" testId="7eb21e73-05c0-5a01-0b1e-a2710310a71c" testName="CautareInLimbiDiferite(&quot;weather&quot;,null)" computerName="DESKTOP-E2811S1" duration="00:00:13.5376940" startTime="2025-12-01T18:06:01.7700257+02:00" endTime="2025-12-01T18:06:15.3077193+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c3f3bd8c-069c-425a-8097-cfa8e3026e53">
+      <Output>
+        <StdOut>Given că sunt pe pagina principală Google&#xD;
+-&gt; done: GoogleVariant3Steps.GivenCaSuntPePaginaPrincipalaGoogle() (0,8s)&#xD;
+When caut pe Google "weather"&#xD;
+-&gt; done: GoogleVariant3Steps.WhenCautPeGoogle("weather") (6,0s)&#xD;
+Then rezultatele Google trebuie să conțină "weather"&#xD;
+-&gt; done: GoogleVariant3Steps.ThenRezultateleGoogleTrebuieSaContina("weather") (0,3s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8831aa22-2d99-4bb2-832e-01a6c02423e6" testId="8327a5f6-5aa2-58fc-546c-8dce47dbca2e" testName="CautareCase_Insensitive" computerName="DESKTOP-E2811S1" duration="00:00:18.7000770" startTime="2025-12-01T18:04:22.1591995+02:00" endTime="2025-12-01T18:04:40.8591709+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8831aa22-2d99-4bb2-832e-01a6c02423e6">
+      <Output>
+        <StdOut>Given că sunt pe pagina principală Google&#xD;
+-&gt; done: GoogleVariant3Steps.GivenCaSuntPePaginaPrincipalaGoogle() (0,7s)&#xD;
+When caut pe Google "Google"&#xD;
+-&gt; done: GoogleVariant3Steps.WhenCautPeGoogle("Google") (5,9s)&#xD;
+And memorez primul rezultat Google&#xD;
+-&gt; done: GoogleVariant3Steps.WhenMemorezPrimulRezultatGoogle() (0,0s)&#xD;
+And caut pe Google "google"&#xD;
+-&gt; done: GoogleVariant3Steps.WhenCautPeGoogle("google") (5,2s)&#xD;
+Then primul rezultat Google trebuie să fie similar pentru case-insensitive&#xD;
+-&gt; done: GoogleVariant3Steps.ThenPrimulRezultatGoogleTrebuieSaFieSimilarPentruCase_Insensitive() (0,1s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="90bad646-43df-4092-bc4c-e62b1a2d9079" testId="66d2656e-1ef3-dd33-cbd7-b067d82f3e73" testName="ServiciulCalculator" computerName="DESKTOP-E2811S1" duration="00:00:13.9255820" startTime="2025-12-01T18:06:15.3091874+02:00" endTime="2025-12-01T18:06:29.2347691+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="90bad646-43df-4092-bc4c-e62b1a2d9079">
+      <Output>
+        <StdOut>Given că sunt pe pagina principală Google&#xD;
+-&gt; done: GoogleVariant3Steps.GivenCaSuntPePaginaPrincipalaGoogle() (0,8s)&#xD;
+When caut pe Google "calculator"&#xD;
+-&gt; done: GoogleVariant3Steps.WhenCautPeGoogle("calculator") (6,5s)&#xD;
+Then serviciul de calculator Google trebuie să fie afișat&#xD;
+-&gt; done: GoogleVariant3Steps.ThenServiciulDeCalculatorGoogleTrebuieSaFieAfisat() (0,2s)</StdOut>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="CautareInLimbiDiferite(&quot;weather&quot;,null)" storage="c:\users\lungu\desktop\6-7_cpp\lab7\lab7cpp - slow captcha edition\lab7cpp\bin\debug\net6.0\lab7cpp.dll" id="7eb21e73-05c0-5a01-0b1e-a2710310a71c">
+      <Execution id="c3f3bd8c-069c-425a-8097-cfa8e3026e53" />
+      <TestMethod codeBase="C:\Users\lungu\Desktop\6-7_CPP\Lab7\Lab7CPP - Slow CAPTCHA Edition\Lab7CPP\bin\Debug\net6.0\Lab7CPP.dll" adapterTypeName="executor://nunit3testexecutor/" className="Lab7CPP.Features.CautariGoogle_Varianta3Feature" name="CautareInLimbiDiferite(&quot;weather&quot;,null)" />
+    </UnitTest>
+    <UnitTest name="ServiciulCalculator" storage="c:\users\lungu\desktop\6-7_cpp\lab7\lab7cpp - slow captcha edition\lab7cpp\bin\debug\net6.0\lab7cpp.dll" id="66d2656e-1ef3-dd33-cbd7-b067d82f3e73">
+      <Execution id="90bad646-43df-4092-bc4c-e62b1a2d9079" />
+      <TestMethod codeBase="C:\Users\lungu\Desktop\6-7_CPP\Lab7\Lab7CPP - Slow CAPTCHA Edition\Lab7CPP\bin\Debug\net6.0\Lab7CPP.dll" adapterTypeName="executor://nunit3testexecutor/" className="Lab7CPP.Features.CautariGoogle_Varianta3Feature" name="ServiciulCalculator" />
+    </UnitTest>
+    <UnitTest name="CautareInLimbiDiferite(&quot;calculator&quot;,null)" storage="c:\users\lungu\desktop\6-7_cpp\lab7\lab7cpp - slow captcha edition\lab7cpp\bin\debug\net6.0\lab7cpp.dll" id="b4a1859e-6bf4-22dc-bd96-560fcd37e459">
+      <Execution id="1e55f984-4d2b-49e5-8070-97ef26ee6754" />
+      <TestMethod codeBase="C:\Users\lungu\Desktop\6-7_CPP\Lab7\Lab7CPP - Slow CAPTCHA Edition\Lab7CPP\bin\Debug\net6.0\Lab7CPP.dll" adapterTypeName="executor://nunit3testexecutor/" className="Lab7CPP.Features.CautariGoogle_Varianta3Feature" name="CautareInLimbiDiferite(&quot;calculator&quot;,null)" />
+    </UnitTest>
+    <UnitTest name="ServiciulDeConversie" storage="c:\users\lungu\desktop\6-7_cpp\lab7\lab7cpp - slow captcha edition\lab7cpp\bin\debug\net6.0\lab7cpp.dll" id="d51711dc-bd3b-a04a-4cb3-4be7cbc68909">
+      <Execution id="ffd7483f-4246-4c58-bc69-55fcaad9b061" />
+      <TestMethod codeBase="C:\Users\lungu\Desktop\6-7_CPP\Lab7\Lab7CPP - Slow CAPTCHA Edition\Lab7CPP\bin\Debug\net6.0\Lab7CPP.dll" adapterTypeName="executor://nunit3testexecutor/" className="Lab7CPP.Features.CautariGoogle_Varianta3Feature" name="ServiciulDeConversie" />
+    </UnitTest>
+    <UnitTest name="CautareInLimbiDiferite(&quot;meteo&quot;,null)" storage="c:\users\lungu\desktop\6-7_cpp\lab7\lab7cpp - slow captcha edition\lab7cpp\bin\debug\net6.0\lab7cpp.dll" id="b68ee06e-3ee5-ee69-634e-44e938eba4a9">
+      <Execution id="73e930ea-b0cc-4394-aa56-8cfb12c415fb" />
+      <TestMethod codeBase="C:\Users\lungu\Desktop\6-7_CPP\Lab7\Lab7CPP - Slow CAPTCHA Edition\Lab7CPP\bin\Debug\net6.0\Lab7CPP.dll" adapterTypeName="executor://nunit3testexecutor/" className="Lab7CPP.Features.CautariGoogle_Varianta3Feature" name="CautareInLimbiDiferite(&quot;meteo&quot;,null)" />
+    </UnitTest>
+    <UnitTest name="CautareCase_Insensitive" storage="c:\users\lungu\desktop\6-7_cpp\lab7\lab7cpp - slow captcha edition\lab7cpp\bin\debug\net6.0\lab7cpp.dll" id="8327a5f6-5aa2-58fc-546c-8dce47dbca2e">
+      <Execution id="8831aa22-2d99-4bb2-832e-01a6c02423e6" />
+      <TestMethod codeBase="C:\Users\lungu\Desktop\6-7_CPP\Lab7\Lab7CPP - Slow CAPTCHA Edition\Lab7CPP\bin\Debug\net6.0\Lab7CPP.dll" adapterTypeName="executor://nunit3testexecutor/" className="Lab7CPP.Features.CautariGoogle_Varianta3Feature" name="CautareCase_Insensitive" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="d51711dc-bd3b-a04a-4cb3-4be7cbc68909" executionId="ffd7483f-4246-4c58-bc69-55fcaad9b061" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b4a1859e-6bf4-22dc-bd96-560fcd37e459" executionId="1e55f984-4d2b-49e5-8070-97ef26ee6754" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b68ee06e-3ee5-ee69-634e-44e938eba4a9" executionId="73e930ea-b0cc-4394-aa56-8cfb12c415fb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7eb21e73-05c0-5a01-0b1e-a2710310a71c" executionId="c3f3bd8c-069c-425a-8097-cfa8e3026e53" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8327a5f6-5aa2-58fc-546c-8dce47dbca2e" executionId="8831aa22-2d99-4bb2-832e-01a6c02423e6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="66d2656e-1ef3-dd33-cbd7-b067d82f3e73" executionId="90bad646-43df-4092-bc4c-e62b1a2d9079" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="6" executed="6" passed="5" failed="1" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 4.2.0.0: Test execution started&#xD;
+Running all tests in C:\Users\lungu\Desktop\6-7_CPP\Lab7\Lab7CPP - Slow CAPTCHA Edition\Lab7CPP\bin\Debug\net6.0\Lab7CPP.dll&#xD;
+   NUnit3TestExecutor discovered 6 of 6 NUnit test cases using Current Discovery mode, Non-Explicit run&#xD;
+NUnit Adapter 4.2.0.0: Test execution complete&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="DESKTOP-E2811S1" outcome="Warning" timestamp="2025-12-01T18:04:40.8691878+02:00">
+        <Text>Given că sunt pe pagina principală Google&#xD;
+-&gt; done: GoogleVariant3Steps.GivenCaSuntPePaginaPrincipalaGoogle() (0,7s)&#xD;
+When caut pe Google "Google"&#xD;
+-&gt; done: GoogleVariant3Steps.WhenCautPeGoogle("Google") (5,9s)&#xD;
+And memorez primul rezultat Google&#xD;
+-&gt; done: GoogleVariant3Steps.WhenMemorezPrimulRezultatGoogle() (0,0s)&#xD;
+And caut pe Google "google"&#xD;
+-&gt; done: GoogleVariant3Steps.WhenCautPeGoogle("google") (5,2s)&#xD;
+Then primul rezultat Google trebuie să fie similar pentru case-insensitive&#xD;
+-&gt; done: GoogleVariant3Steps.ThenPrimulRezultatGoogleTrebuieSaFieSimilarPentruCase_Insensitive() (0,1s)&#xD;
+</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-E2811S1" outcome="Warning" timestamp="2025-12-01T18:05:49.4512580+02:00">
+        <Text>Given că sunt pe pagina principală Google&#xD;
+-&gt; done: GoogleVariant3Steps.GivenCaSuntPePaginaPrincipalaGoogle() (0,1s)&#xD;
+When caut pe Google "calculator"&#xD;
+-&gt; error: Timed out after 60 seconds (60,5s)&#xD;
+Then rezultatele Google trebuie să conțină "calculator"&#xD;
+-&gt; skipped because of previous errors&#xD;
+</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-E2811S1" outcome="Warning" timestamp="2025-12-01T18:06:01.7706893+02:00">
+        <Text>Given că sunt pe pagina principală Google&#xD;
+-&gt; done: GoogleVariant3Steps.GivenCaSuntPePaginaPrincipalaGoogle() (0,8s)&#xD;
+When caut pe Google "meteo"&#xD;
+-&gt; done: GoogleVariant3Steps.WhenCautPeGoogle("meteo") (4,8s)&#xD;
+Then rezultatele Google trebuie să conțină "meteo"&#xD;
+-&gt; done: GoogleVariant3Steps.ThenRezultateleGoogleTrebuieSaContina("meteo") (0,3s)&#xD;
+</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-E2811S1" outcome="Warning" timestamp="2025-12-01T18:06:15.3082964+02:00">
+        <Text>Given că sunt pe pagina principală Google&#xD;
+-&gt; done: GoogleVariant3Steps.GivenCaSuntPePaginaPrincipalaGoogle() (0,8s)&#xD;
+When caut pe Google "weather"&#xD;
+-&gt; done: GoogleVariant3Steps.WhenCautPeGoogle("weather") (6,0s)&#xD;
+Then rezultatele Google trebuie să conțină "weather"&#xD;
+-&gt; done: GoogleVariant3Steps.ThenRezultateleGoogleTrebuieSaContina("weather") (0,3s)&#xD;
+</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-E2811S1" outcome="Warning" timestamp="2025-12-01T18:06:29.2356955+02:00">
+        <Text>Given că sunt pe pagina principală Google&#xD;
+-&gt; done: GoogleVariant3Steps.GivenCaSuntPePaginaPrincipalaGoogle() (0,8s)&#xD;
+When caut pe Google "calculator"&#xD;
+-&gt; done: GoogleVariant3Steps.WhenCautPeGoogle("calculator") (6,5s)&#xD;
+Then serviciul de calculator Google trebuie să fie afișat&#xD;
+-&gt; done: GoogleVariant3Steps.ThenServiciulDeCalculatorGoogleTrebuieSaFieAfisat() (0,2s)&#xD;
+</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-E2811S1" outcome="Warning" timestamp="2025-12-01T18:06:45.9256136+02:00">
+        <Text>Given că sunt pe pagina principală Google&#xD;
+-&gt; done: GoogleVariant3Steps.GivenCaSuntPePaginaPrincipalaGoogle() (0,9s)&#xD;
+When caut pe Google "Google converter services"&#xD;
+-&gt; done: GoogleVariant3Steps.WhenCautPeGoogle("Google converter ...") (9,1s)&#xD;
+Then serviciul de conversie Google trebuie să fie afișat în partea de sus&#xD;
+-&gt; done: GoogleVariant3Steps.ThenServiciulDeConversieGoogleTrebuieSaFieAfisatInParteaDeSus() (0,2s)&#xD;
+</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>
